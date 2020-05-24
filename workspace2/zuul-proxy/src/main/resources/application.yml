@@ -1,0 +1,19 @@
+server:
+  port: 9090
+  
+spring:  application:    name: zuul-proxy
+    
+eureka:  client:    register-with-eureka: true
+    service-url:      defaultZone: http://localhost:8761/eureka/
+      
+zuul:
+  prefix: /api
+  routes:    test-zuul:
+      path: /redirect/**
+      location: http://www.google.co.in
+    hr-service:
+      path: /client/**
+      location: hr-app
+    emp-service:
+      path: /service/**
+      location: emp-service 
