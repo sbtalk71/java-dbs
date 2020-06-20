@@ -12,6 +12,7 @@ public class DemoWrappers {
 		int y=x;
 		
 		Double d=10.4;
+		
 		Float f=12.6f;
 		
 		
